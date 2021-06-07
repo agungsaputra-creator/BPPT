@@ -1,0 +1,263 @@
+$fontsize: 18px;
+$fontsizeHeading1: 2.2em; // 40px
+$fontsizeHeading2: 1.7em; // 30px
+$fontsizeHeading3: 1.3em; // 24px
+$fontsizeHeading4: 1.2em; // 21px
+$fontsizeHeading5: 1.1em; // 18px
+$fontsizeHeading6: 1em;
+$fontsizeParagraph: 1em;
+$fontsizeParagraphsmall: 0.9em;
+$fontsizeParagraphxsmall: 0.8em;
+$fontsizeParagraphxxsmall: 0.7em;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("/assets/fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype"),
+    url("/assets/fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold")
+      format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype"),
+    url("/assets/fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Focus
+*:focus {
+  outline: none;
+}
+
+body {
+  font-size: $fontsize !important;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 400;
+  font-family: "Montserrat" !important;
+  min-width: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Montserrat" !important;
+  font-weight: bold;
+  margin: unset;
+  line-height: 1.4;
+}
+
+h1,
+.h1 {
+  font-size: $fontsizeHeading1;
+}
+
+h2,
+.h2 {
+  font-size: $fontsizeHeading2;
+}
+
+h3,
+.h3 {
+  font-size: $fontsizeHeading3;
+}
+
+h4,
+.h4 {
+  font-size: $fontsizeHeading4;
+}
+
+h5,
+.h5 {
+  font-size: $fontsizeHeading5;
+}
+
+h6,
+.h6 {
+  font-size: $fontsizeHeading6;
+}
+
+p,
+.p,
+.psmall,
+.pxsmall,
+.pxxsmall {
+  margin: 0;
+}
+
+p,
+.p {
+  font-size: $fontsizeParagraph;
+}
+
+.psmall {
+  font-size: $fontsizeParagraphsmall;
+}
+
+.pxsmall {
+  font-size: $fontsizeParagraphxsmall;
+}
+
+.pxxsmall {
+  font-size: $fontsizeParagraphxxsmall;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.font-regular {
+  font-weight: 400 !important;
+}
+.font-semibold {
+  font-weight: 600 !important;
+}
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// button
+.btn-danger {
+  background: #f44913 !important;
+  border: #f44913 !important;
+  border-radius: 8px !important;
+  &:hover {
+    background: #f44913 !important;
+  }
+  &.big {
+    width: 200px;
+    height: 60px;
+  }
+}
+.btn-primary {
+  background: #3759d3 !important;
+  border: #3759d3 !important;
+  border-radius: 8px !important;
+  &:hover {
+    background: #3759d3 !important;
+  }
+  &.big {
+    width: 200px;
+    height: 60px;
+  }
+}
+.logo {
+  height: 120px;
+}
+
+#home {
+  background-image: url(/assets/media/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .info {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    .border-info {
+      background: #f44913;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      height: 100%;
+    }
+    .border-line {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 94%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  #home {
+    height: 100%;
+    width: 100vw;
+    .info {
+      position: relative;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  $fontsize: 14px;
+
+  body {
+    font-size: $fontsize !important;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .btn-danger {
+    &.big {
+      width: 160px;
+      height: 50px;
+    }
+  }
+  .btn-primary {
+    &.big {
+      width: 160px;
+      height: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  $fontsize: 11px;
+
+  body {
+    font-size: $fontsize !important;
+  }
+
+  .logo {
+    height: 80px;
+  }
+}

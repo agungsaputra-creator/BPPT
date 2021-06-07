@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype"), url("/assets/fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype"), url("/assets/fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype"), url("/assets/fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-size: 18px !important;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 400;
+  font-family: "Montserrat" !important;
+  min-width: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Montserrat" !important;
+  font-weight: bold;
+  margin: unset;
+  line-height: 1.4;
+}
+
+h1,
+.h1 {
+  font-size: 2.2em;
+}
+
+h2,
+.h2 {
+  font-size: 1.7em;
+}
+
+h3,
+.h3 {
+  font-size: 1.3em;
+}
+
+h4,
+.h4 {
+  font-size: 1.2em;
+}
+
+h5,
+.h5 {
+  font-size: 1.1em;
+}
+
+h6,
+.h6 {
+  font-size: 1em;
+}
+
+p,
+.p,
+.psmall,
+.pxsmall,
+.pxxsmall {
+  margin: 0;
+}
+
+p,
+.p {
+  font-size: 1em;
+}
+
+.psmall {
+  font-size: 0.9em;
+}
+
+.pxsmall {
+  font-size: 0.8em;
+}
+
+.pxxsmall {
+  font-size: 0.7em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.font-regular {
+  font-weight: 400 !important;
+}
+
+.font-semibold {
+  font-weight: 600 !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: #f44913 !important;
+  border: #f44913 !important;
+  border-radius: 8px !important;
+}
+
+.btn-danger:hover {
+  background: #f44913 !important;
+}
+
+.btn-danger.big {
+  width: 200px;
+  height: 60px;
+}
+
+.btn-primary {
+  background: #3759d3 !important;
+  border: #3759d3 !important;
+  border-radius: 8px !important;
+}
+
+.btn-primary:hover {
+  background: #3759d3 !important;
+}
+
+.btn-primary.big {
+  width: 200px;
+  height: 60px;
+}
+
+.logo {
+  height: 120px;
+}
+
+#home {
+  background-image: url(/assets/media/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#home .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+#home .info .border-info {
+  background: #f44913;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+#home .info .border-line {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 94%;
+  height: 100%;
+}
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  #home {
+    height: 100%;
+    width: 100vw;
+  }
+  #home .info {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px !important;
+  }
+  .logo {
+    height: 100px;
+  }
+  .btn-danger.big {
+    width: 160px;
+    height: 50px;
+  }
+  .btn-primary.big {
+    width: 160px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 11px !important;
+  }
+  .logo {
+    height: 80px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
