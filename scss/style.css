@@ -162,11 +162,16 @@ a:hover {
   height: 60px;
 }
 
-.logo {
+.logo.img, .logo.text {
   height: 120px;
 }
 
-#home {
+.logo.img-regis, .logo.text-regis {
+  height: 90px;
+}
+
+#home,
+#registration {
   background-image: url(/assets/media/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -189,7 +194,8 @@ a:hover {
   text-align: center;
 }
 
-#home .info {
+#home .info,
+#registration .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,7 +205,8 @@ a:hover {
   bottom: 0;
 }
 
-#home .info .border-info {
+#home .info .border-info,
+#registration .info .border-info {
   background: #f44913;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +221,8 @@ a:hover {
   height: 100%;
 }
 
-#home .info .border-line {
+#home .info .border-line,
+#registration .info .border-line {
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,13 +237,83 @@ a:hover {
   height: 100%;
 }
 
+#registration {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+#registration .barcode {
+  background: #ffffff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: auto;
+  padding: 5%;
+}
+
+#registration .barcode .text {
+  width: 50%;
+  border-right: 1px solid #b4b4b4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 20px;
+}
+
+#registration .barcode .code {
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#registration .barcode .code img {
+  width: 80%;
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 16px !important;
+  }
+  .logo.img, .logo.text {
+    height: 100px;
+  }
+}
+
 @media screen and (max-width: 823px) and (orientation: landscape) {
-  #home {
+  #home,
+  #registration {
     height: 100%;
     width: 100vw;
   }
-  #home .info {
+  #home .barcode,
+  #registration .barcode {
+    width: 90%;
+  }
+  #home .info,
+  #registration .info {
     position: relative;
+  }
+  #home .logo.img, #home .logo.text,
+  #registration .logo.img,
+  #registration .logo.text {
+    height: 70px;
   }
 }
 
@@ -243,7 +321,7 @@ a:hover {
   body {
     font-size: 14px !important;
   }
-  .logo {
+  .logo.img, .logo.text {
     height: 100px;
   }
   .btn-danger.big {
@@ -260,8 +338,67 @@ a:hover {
   body {
     font-size: 11px !important;
   }
-  .logo {
-    height: 80px;
+  .logo.img, .logo.text {
+    height: 50px;
+  }
+  .logo.img-regis, .logo.text-regis {
+    height: 70px;
+  }
+  #home {
+    text-align: left;
+  }
+  #registration {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  .logo.img {
+    height: 150px;
+  }
+  .logo.text {
+    height: 50px;
+  }
+  .logo.img-regis {
+    height: 110px;
+  }
+  .logo.text-regis {
+    height: 40px;
+  }
+  #registration {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #registration .barcode {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #registration .barcode .text {
+    width: 100%;
+    padding-right: 0;
+    border-right: unset;
+  }
+  #registration .barcode .code {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+  #registration .barcode .code img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #registration .barcode {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
